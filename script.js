@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Task Creation
-        const li = document.createElement('li');
-        li.textContent = taskText;
-
+        if (taskText !==""){
+            const li = document.createElement('li');
+            li.textContent = taskText;
+            return;
+        }
         // Create remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
