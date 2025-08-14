@@ -16,15 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Task Creation
-        if (taskText !==""){
-            const li = document.createElement('li');
-            li.textContent = taskText;
-            return;
-        }
+        const li = document.createElement('li');
+        li.textContent = taskText;
+
         // Create remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn'); // ✅ Updated to classList.add
 
         // Task Removal
         removeButton.onclick = function () {
